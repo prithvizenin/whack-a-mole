@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whack-a-Mole</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-sky-200 min-h-screen flex flex-col items-center justify-center p-4 transition-colors duration-500">
+
+    <div class="w-full max-w-4xl mx-auto bg-white/70 backdrop-blur-sm rounded-3xl shadow-2xl p-4 sm:p-8">
+        
+
+        <header class="text-center mb-6">
+            <h1 class="text-4xl sm:text-6xl font-extrabold text-gray-800 tracking-tight">Whack-a-Mole!</h1>
+            <p class="text-gray-600 mt-2">Click the moles as fast as you can!</p>
+        </header>
+
+
+        <div class="flex flex-col sm:flex-row justify-around items-center bg-gray-100 rounded-2xl p-4 mb-8 shadow-inner">
+            <div class="text-center">
+                <span class="text-lg font-semibold text-gray-500">Score</span>
+                <p id="score" class="text-4xl font-bold text-emerald-500">0</p>
+            </div>
+            <div class="my-4 sm:my-0">
+                 <button id="startButton" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full text-xl shadow-lg transform hover:scale-105 transition-transform duration-200 ease-in-out disabled:bg-gray-400 disabled:cursor-not-allowed">Start Game</button>
+            </div>
+            <div class="text-center">
+                <span class="text-lg font-semibold text-gray-500">Time Left</span>
+                <p id="timer" class="text-4xl font-bold text-red-500">30</p>
+            </div>
+        </div>
+
+
+        <main id="game-board" class="grass w-full p-6 rounded-2xl shadow-lg">
+            <div class="grid grid-cols-3 gap-4 sm:gap-8 justify-items-center">
+            </div>
+        </main>
+        
+        <div id="gameOverModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+            <div class="bg-white rounded-2xl p-8 text-center shadow-2xl transform scale-95 transition-transform duration-300">
+                <h2 class="text-4xl font-bold text-gray-800 mb-2">Game Over!</h2>
+                <p class="text-lg text-gray-600 mb-4">Your final score is:</p>
+                <p id="finalScore" class="text-6xl font-extrabold text-blue-500 mb-6">0</p>
+                <button id="playAgainButton" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full text-xl shadow-lg transform hover:scale-105 transition-transform duration-200 ease-in-out">Play Again</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.77/Tone.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
