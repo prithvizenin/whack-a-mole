@@ -2,15 +2,9 @@
 
 A fun, interactive **Whack-a-Mole** game built using **HTML, CSS, and JavaScript**. Test your reflexes by hitting as many moles as you can before the time runs out!
 
-![Game Preview](./assets/screenshot.png) <!-- Replace with your actual image path or remove this line if not needed -->
 
----
 
-## 🎮 Demo
 
-👉 [Play the Game Live](https://your-demo-link.com) <!-- Replace with your GitHub Pages or hosted link -->
-
----
 
 ## 📌 Features
 
